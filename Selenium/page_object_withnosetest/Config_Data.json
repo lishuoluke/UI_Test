@@ -1,0 +1,66 @@
+{
+
+  "TestServer": "Server 2",
+  "TestBrowser": "1",
+  "browser_comment": "Browser Servers: 1 for Chrome, 2 for Firefox , To be added...",
+  "username":"username",
+  "password": "password",
+  "languageselector": "body > div > div.top > div > div.top_right > div.info > div.btn-group.m-t-10 > div",
+  "Language":"3",
+  "language_comment": "Language: 1 for zh_CN, 2 for en_US, 3 for ru_RU",
+   "Server Address": [
+    {
+      "Server": "Server 1",
+      "Login Page": "http://99.99.99.99:9999/%2Fdashboard.htm",
+      "Main Page":"http://99.99.99.99:99990/",
+      "MainDashboard":"http://99.99.99.99:9999/user/dashboard.htm"
+    },
+    {
+      "Server": "Server 2",
+      "Login Page": "http://99.99.99.99:9999/%2Fdashboard.htm",
+      "Main Page":"http://99.99.99.99:99990/",
+      "MainDashboard":"http://99.99.99.99:9999/user/dashboard.htm"
+    }
+  ],
+  "Keys":
+    {
+      "Chinese":"body > div > div.top > div > div.top_right > div.info > div.btn-group.m-t-10.open > ul > li:nth-child(2) > a",
+      "Russian":"body > div > div.top > div > div.top_right > div.info > div.btn-group.m-t-10.open > ul > li:nth-child(3) > a",
+      "English":"body > div > div.top > div > div.top_right > div.info > div.btn-group.m-t-10.open > ul > li:nth-child(1) > a",
+      "username":"username",
+      "password":"password",
+      "submit":"submit-login",
+      "home":"#nav > ul > li:nth-child(1) > a",
+      "dashboard":"#nav > ul > li:nth-child(2) > a",
+      "settings":"#nav > ul > li:nth-child(3) > a",
+      "statistics":"#nav > ul > li:nth-child(4) > a",
+      "announcement":"#nav > ul > li:nth-child(5) > a",
+      "loginbutton":"body > div > div.top > div > div.top_right > div.info > div.email.btn-group > a",
+      "logintag":"body > div > div.top > div > div.top_right > div.info > div.email.btn-group.open > ul > li:nth-child(1) > a"
+    },
+    "Chinese":
+    {
+      "home":"首页",
+      "dashboard":"用户面板",
+      "settings":"设置",
+      "statistics":"统计",
+      "announcement":"公告"
+    },
+    "English":
+    {
+      "home":"Home",
+      "dashboard":"Dashboard",
+      "settings":"Settings",
+      "statistics":"Statistics",
+      "announcement":"Announcement"
+    },
+    "Russian":
+    {
+      "home":"Дом",
+      "dashboard":"Панель",
+      "settings":"Settings",
+      "statistics":"Статистика",
+      "announcement":"Annoucement"
+    }
+
+}

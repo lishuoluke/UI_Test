@@ -1,0 +1,10 @@
+{
+    "Machine Name": "EC520",
+    "Machine Serial": "serial number",
+	"testResultFolder": "result path",
+    "Machine Location": "Shanghai",
+    "User Name": "username",
+    "Password": "password",
+    "WIFI password": "Dyson-123",
+    "Machine Prefix":"BLE"
+}

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "datePath": "C:\\date",
+  "logLevel": 10,
+  "deleteLog": false,
+  "buildPath": "C:\\build",
+  "testResultPath": "C:\\test_script\\test_result",
+  "testLogPath": "C:\\test_log",
+
+  "artifactory":
+  {
+    "server": "http://10.47.93.142:8111/artifactory/",
+    "username": "520_dev_gate",
+    "password": "xxx",
+    "path": "N520_Project/1_Dev/Release_SOP_Branch/520_package_branch_Releases/sop_build84/OTA",
+    "file": "ECG2EF.02.04.010.0084.zip"
+  },
+
+  "python":
+  {
+    "scriptPath": "C:\\test_script"
+  },
+
+  "testrail":
+  {
+    "server": "testrailaddress",
+    "username": "username",
+    "password": "password",
+    "runId": 2282
+  },
+
+  "jira":
+  {
+    "server": "jiraaddress",
+    "username": "username",
+    "password": "password"
+  }
+}

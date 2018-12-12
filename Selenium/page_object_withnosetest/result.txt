@@ -1,0 +1,12 @@
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/nose/plugins/manager.py:395: RuntimeWarning: Unable to load plugin html = nose_html_reporting:HtmlReport: No module named 'StringIO'
+  RuntimeWarning)
+test_scenario (nose_test_Statistics.browser) ... ok
+test_scenario (nose_test_Dashboards.browser) ... ok
+test_scenario (nose_test_Home.browser) ... ok
+test_scenario (nose_test_Annoucement.browser) ... ok
+test_scenario (nose_test_Settings.browser) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 82.712s
+
+OK

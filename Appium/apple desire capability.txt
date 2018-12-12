@@ -1,0 +1,82 @@
+import ctypes  # An included library with Python install.
+import json
+import time
+import datetime
+import os
+
+from appium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from appium.webdriver.common.touch_action import TouchAction
+from subprocess import Popen
+
+import appium_helper as appHelper
+
+# Returns abs path relative to this file and not cwd
+
+
+desired_caps = {'platformName': 'ios',
+                'platformVersion': '11.2',
+                'deviceName':'iPhone 6s',
+                'app':'path of the apps',
+                'bundleid':"com.dyson.dyson-link.c6.development", # your bundle id
+                'automationName':"XCUITest",
+                'showXcodeLog':"true",
+                'locale':"en_GB",
+                'language':"en",
+                'udid':'5D549DA6-0F36-4EBE-8243-DA7AE58A0DFD',
+                #'noReset': 'true',
+                #'cloudEnvironmentAndroid':'integration',
+                #'optionalIntentArguments': '--es Environment integration',
+                #'processArguments': '{"args":["-Environment mockShared, -TestSessionToken 2017-12-07_09-51-31-546870"]}',
+                'processArguments': '{"args":["-Environment integration, -TestSessionToken 2017-12-07_09-51-31-546870"]}',
+                "autoGrantPermissions" : 'true',
+                "optionalIntentArguments": "--es Environment integration" # mayface env problem??
+
+}
+#Define pop up window
+
+
+#Define driver
+#driver = webdriver.Remote('http://localhost:4723/wd/hub',desired_caps)
+driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub',desired_caps)
+
+
+
+#print(machine_serial)
+
+## This is used to shake the devide for the SI server to set Region
+
+#Mbox('Reminder', 'Set location and Environments, you have 10 seconds', 1)
+time.sleep(1)
+
+
+
+#Log in
+try:
+    el0 = driver.find_element_by_id('getconnected_button')
+    el0.click()
+    time.sleep(2)
+    el1 = driver.find_element_by_id('textinput_left')
+    el1.send_keys('shuo.li@dyson.com')
+    #time.sleep(3)
+    el2 = driver.find_element_by_id('next_button')
+    el2.click()
+    time.sleep(3)
+    #el3 = driver.find_element_by_id('textinput_left')
+    #el3.send_keys('123456')
+    #time.sleep(1)
+    appHelper.setPasswordElement(driver, By.ID, 'textinput_left', 10, '123456')
+    el4 = driver.find_element_by_id('proceed_button')
+    el4.click()
+    print ('log in successful')
+except:
+    print ('log in failure')
+
+
+#driver.quit()
+
+
+#Go to Menu and Press the button to add machine
+
